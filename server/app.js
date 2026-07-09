@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/my-blog");
+mongoose.connect(process.eng.MONGODB_URI || "mongodb://127.0.0.1/my-blog");
 
 const app = express();
 
